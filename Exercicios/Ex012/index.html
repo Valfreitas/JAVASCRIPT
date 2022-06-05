@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <link rel="stylesheet" href="/Exercicios/style.css">
+</head>
+
+<body>
+    <h1 style="font-family:Pacifico">É par ou ímpar?</h1>
+    <button onclick="clique()">Clique para iniciar</button>
+    <div id="res">
+        <p>O resultado vai aparecer aqui...</p>
+    </div>
+    <script>
+        var res = window.document.getElementById('res')
+        var tipo
+        function clique() {
+            var n = window.prompt('Digite um número:')
+        if (n % 2 == 0){
+            tipo = 'PAR'
+        } else {
+            tipo = 'IMPAR'
+        }
+        res.innerHTML = `<p>O número ${n} que foi digitado é <strong>${tipo}</strong>!</p>`
+        }
+    </script>
+</body>
+
+</html>

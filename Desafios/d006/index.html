@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de temperaturas</title>
+    <link rel="stylesheet" href="/Desafios/style.css">
+</head>
+<body>
+    <h1>Conversor de temperaturas</h1>
+    <button onclick="clique()">Converter</button>
+    <div id="res">
+        <p>Clique no botão acima para iniciar.</p>
+    </div>
+    <script>
+        function clique() {
+        var n = Number(window.prompt('Digite uma distância em metros (m)'))
+        var res = window.document.getElementById('res')
+        var k = n + 273.15
+        var f = n * 9.5 + 32
+      
+
+        res.innerHTML = `<p><strong>A temperatura de ${n}°C, corresponde a...</strong></p>`
+        res.innerHTML += `<p>${k.toFixed(2)}°K (Kelvin)</p>`
+        res.innerHTML += `<p>${f.toFixed(2)}°F (Farhrenheit)</p>`
+        
+        }
+    </script>
+</body>
+</html>

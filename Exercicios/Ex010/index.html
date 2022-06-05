@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Externo</title>
+    <link rel="stylesheet" href="/Exercicios/style.css">
+</head>
+<body>
+    <h1 style="font-family:Pacifico">JavaScript Externo</h1>
+    <button onclick="clique1()">Ação 1</button>
+    <button onclick="clique2()">Ação 1</button>
+    <button onclick="clique3()">Ação 2</button>
+    <button onclick="clique4()">Ação 3</button>
+    <div id="res">
+        <p>Aqui vou registrar suas ações com os botões acima.</p>
+    </div>
+<script>
+    var res = window.document.getElementById('res')
+    function clique1(){
+        res.innerHTML += `<p>Clicou no primeiro botão</p>`
+    }
+    function clique2(){
+        res.innerHTML += `<p>Clicou no segundo botão</p>`
+    }
+    function clique3(){
+        res.innerHTML += `<p>Clicou no terceiro botão</p>`
+    }
+    function clique4(){
+        res.innerHTML += `<p>Clicou no quarto botão</p>`
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <link rel="stylesheet" href="/Exercicios/style.css">
+</head>
+<body>
+    <h1>Somando dois números</h1>
+    <button onclick="clique()">Iniciar soma</button>
+    <div id="res">
+        <p>O resultado vem aqui...</p>
+    </div>
+    <script>
+        function clique() {
+            var n1 = window.prompt('Digite um número:')
+            var n2 = window.prompt('Digite outro número:')
+            var soma = Number(n1) + Number(n2)
+            var res = window.document.getElementById('res')
+            res.innerHTML  = `<p>A soma entre <mark>${n1}</mark> e <mark>${n2}</mark> e a metade é <strong>${soma}</strong>!</p>`
+    
+        }
+    </script>
+</body>
+</html>

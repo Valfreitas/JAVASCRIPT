@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Cliques</title>
+    <link rel="stylesheet" href="/Exercicios/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    </style>
+</head>
+<body>
+    <h1 style="font-family:Pacifico">Contador de cliques</h1>
+    <button onclick="clique1()">Clique em mim</button>
+    <button onclick="clique2()">Zerar o contador</button>
+    <div id="res">
+        <p></p>
+    </div>
+<script>
+    var n1 = 0 
+    function clique1(){
+        n1 = n1 + 1
+        var res = window.document.getElementById('res')
+        res.innerHTML = `<p>O contador está com <mark>${n1}</mark> cliques.</p>`
+    }
+    function clique2(){
+        n1 = 0
+        res.innerHTML = null
+    }
+</script>
+</body>
+</html>

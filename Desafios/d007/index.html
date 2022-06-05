@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de temperaturas</title>
+    <link rel="stylesheet" href="/Desafios/style.css">
+</head>
+
+<body onload="cotacao()">
+    <h1>Conversor R$ → US$</h1>
+    <button onclick="clique()">Converter</button>
+    <div id="res">
+        <p>Clique no botão acima para iniciar.</p>
+    </div>
+    <script>
+        var dolar
+        function cotacao() {
+            dolar = Number(window.prompt('Antes de mais nada. Quanto está a cotação do dólar agora?'))
+        
+        }
+
+        function clique() {
+            var n = Number(window.prompt('Quantos R$ você tem na carteira?'))
+            var calc = n / dolar
+            var res = window.document.getElementById('res')
+
+            res.innerHTML = `<p>Você vai conseguir comprar ${calc.toFixed(2)} dólares!</p>`
+
+
+        }
+    </script>
+</body>
+
+</html>

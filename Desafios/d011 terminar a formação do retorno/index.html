@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Bissexto</title>
+    <link rel="stylesheet" href="/Desafios/style.css">
+</head>
+
+<body>
+    <h1>Ano Bissexto</h1>
+    <button onclick="clique()">Verificar</button>
+    <div id="res">
+        <p>Informe um ano para saber se ele é bissexto</p>
+    </div>
+    <script>
+        var retorno
+        function clique() {
+        var a = Number(window.prompt(`Qual é o ano que você quer verificar?`))
+        var b = a / 4
+        var res = window.document.getElementById('res')
+        res.innerHTML = `<p><strong>Analisando o ano de ${a}...</strong></p>`
+        if (Number.isInteger(b) == true) {
+            retorno = 'É BISSEXTO'
+        } else {
+            retorno = 'NÃO É BISSEXTO'
+        }
+        res.innerHTML += `<p><strong>O ano de ${a} ${retorno}</strong></p>`
+            
+        }
+
+
+    </script>
+</body>
+
+</html>

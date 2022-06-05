@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body{
+            font: 20px Arial;
+        }
+        button {
+            font: 15px Arial;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vários cálculos em JS</h1>
+    <button onclick="clique()">Clique para calcular</button>
+    <section id="resultado">
+        <p>O resultado vai aparecer aqui</p>
+    </section>
+    <script>
+        function clique() {
+            var n1 = window.prompt('Digite um número:')
+            var res = document.querySelector('section#resultado')
+            res.innerHTML = `<p>O número a ser analisado aqui será o <strong>${n1}</strong></p>`
+            res.innerHTML += `<p><hr></p>`
+        }
+    </script>
+</body>
+</html>

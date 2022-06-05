@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajustar salário</title>
+    <link rel="stylesheet" href="/Desafios/style.css">
+</head>
+
+<body>
+    <h1>Reajuste salarial</h1>
+    <button onclick="clique()">Reajustar salário</button>
+    <div id="res">
+        <p>Clique no botão acima para iniciar.</p>
+    </div>
+    <script>
+        function clique() {
+            var nome = window.prompt('Qual é o nome do funcionário?')
+            var salarioAtual = Number(window.prompt(`Qual é o salário de ${nome}`))
+            var porcentagem = Number(window.prompt(`O salário de ${nome} vai ser reajustado em qual porcentagem?`))
+            var ajuste = salarioAtual * (porcentagem / 100 )
+            var novoValor = salarioAtual + ajuste
+            var res = window.document.getElementById('res')
+
+            res.innerHTML = `<p><strong>${nome} recebeu um aumento salarial!</strong></p>`
+            res.innerHTML += `<p>O salário atual era R$ ${salarioAtual}.</p>`
+            res.innerHTML += `<p>Com um aumento de ${porcentagem}%, o salário vai aumentar R$ ${ajuste} no próximo mês.</p>`
+            res.innerHTML += `<p>E a partir daí, ${nome} vai passar a ganhar R$ ${novoValor}.</p>`
+
+        }
+    </script>
+</body>
+
+</html>

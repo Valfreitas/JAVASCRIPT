@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço mudou</title>
+    <link rel="stylesheet" href="/Desafios/style.css">
+</head>
+
+<body>
+    <h1>Preço mudou</h1>
+    <button onclick="clique()">Verificar</button>
+    <div id="res">
+        <p>Clique no botão acima para analisar a mudança de preço.</p>
+    </div>
+    <script>
+        function clique() {
+            var a = Number(window.prompt(`Qual é o valor de a?`))
+            var b = Number(window.prompt(`Qual é o valor de b?`))
+            var c = Number(window.prompt(`Qual é o valor de c?`))
+            var delta = Math.pow(b, 2) - (4 * a * c)
+            var res = window.document.getElementById('res')
+
+            res.innerHTML = `<p><strong>Resolvendo Bhaskara</strong></p>`
+            res.innerHTML += `<p>A equação atual é <strong>
+                ${a}x<sup>2</sup> + ${b}x + ${c} = 0</strong>
+                 </p>`
+            res.innerHTML += `O cálculo realizado será <strong>
+                &#916 = ${b}<sup>2</sup> - 4 . ${a} . ${c}</strong>
+                </p>`
+            res.innerHTML += `<p>O valor calculado foi <strong>
+                <mark>&#916 = ${delta}</mark></strong>
+                </p>`
+        }
+
+
+    </script>
+</body>
+
+</html>

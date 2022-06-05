@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior valor</title>
+    <link rel="stylesheet" href="/Exercicios/style.css">
+</head>
+
+<body>
+    <h1 style="font-family:Pacifico">Maior valor</h1>
+    <button onclick="clique()">Clique para iniciar</button>
+    <div id="res">
+        <p>O resultado vai aparecer aqui...</p>
+    </div>
+    <script>
+
+        var res = window.document.getElementById('res')
+        function clique() {
+            var n1 = window.prompt('Digite um número:')
+            var n2 = window.prompt('Digite outro número:')
+            if (n1 > n2){
+                res.innerHTML = `<p>Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, o maior é <strong>${n1}</strong></p>`
+            } else if (n2 > n1) {
+                res.innerHTML = `<p>Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, o maior é <strong>${n2}</strong></p>`
+            } else {
+                res.innerHTML = `<p>Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, ambos são <strong>IGUAIS</strong></p>`
+            }
+
+        }
+    </script>
+</body>
+
+</html>
